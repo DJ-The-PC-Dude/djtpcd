@@ -27,17 +27,22 @@
     --footer-text: #888;
   }
 
-  body {
-    background: var(--bg);
-    color: var(--text);
-    transition: background var(--transition), color var(--transition);
-  }
+ body {
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  transition: background var(--transition), color var(--transition);
+}
 
-  header, footer {
-    background: var(--header-bg);
-    color: var(--header-text);
-    transition: background var(--transition), color var(--transition);
-  }
+
+ header, footer {
+  background: var(--header-bg);
+  color: var(--header-text);
+  padding: 1rem 0;
+  text-align: center;
+  transition: background var(--transition), color var(--transition);
+}
+
 
   a, nav a {
     color: var(--header-text);
