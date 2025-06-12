@@ -29,3 +29,4 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 
+document.querySelectorAll('section, header, footer').forEach(el => observer.observe(el));
