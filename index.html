@@ -16,44 +16,34 @@
     body {
       background: #f8f9fa;
       color: #333;
+      line-height: 1.6;
     }
 
-    header {
+    header, footer {
       background: #111;
       color: #fff;
       padding: 1rem 0;
+      text-align: center;
     }
 
     .container {
-      max-width: 1140px;
+      max-width: 960px;
       margin: 0 auto;
       padding: 0 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
     }
 
     header h1 {
       font-size: 2rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
       font-weight: 700;
     }
 
-    /* SVG styling */
-    .logo-svg {
-      width: 36px;
-      height: 36px;
-      fill: none;
-      stroke: #fff;
-      stroke-width: 2;
-    }
-
     nav ul {
-      display: flex;
-      gap: 1rem;
       list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 0.75rem;
+      flex-wrap: wrap;
     }
 
     nav a {
@@ -71,54 +61,55 @@
 
     .cta-button {
       display: inline-block;
-      margin-top: 1rem;
+      margin-top: 1.5rem;
       background: #00d4ff;
       color: #111;
       padding: 0.75rem 1.5rem;
-      text-decoration: none;
       font-weight: bold;
       border-radius: 5px;
+      text-decoration: none;
     }
 
     section {
-      padding: 3rem 0;
+      padding: 3rem 1rem;
     }
 
     h2 {
-      margin-bottom: 1rem;
-      text-align: center;
       font-size: 2rem;
+      text-align: center;
+      margin-bottom: 2rem;
     }
 
-    .service-grid,
-    .portfolio-grid {
+    .service-grid, .portfolio-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1.5rem;
+      justify-content: center;
     }
 
-    .service,
-    .portfolio-item {
+    .service, .portfolio-item {
       background: white;
       padding: 1.5rem;
       border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
     .portfolio-item img {
       width: 100%;
       border-radius: 8px;
+      object-fit: cover;
     }
 
     form {
       display: flex;
       flex-direction: column;
       gap: 1rem;
+      max-width: 600px;
+      margin: 0 auto;
     }
 
-    form input,
-    form textarea {
+    form input, form textarea {
       padding: 0.75rem;
       border: 1px solid #ccc;
       border-radius: 5px;
@@ -131,37 +122,35 @@
       font-weight: bold;
       border-radius: 5px;
       cursor: pointer;
+      color: #111;
     }
 
-    footer {
-      background: #111;
+    footer p {
+      margin: 0;
+    }
+
+    footer a {
       color: #ccc;
-      text-align: center;
-      padding: 1rem 0;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      header h1 {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
+
   <header>
     <div class="container">
-      <h1>
-        <!-- Inline SVG logo -->
-        <svg
-          class="logo-svg"
-          viewBox="0 0 64 64"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-label="DJ The PC Dude Logo"
-          role="img"
-          >
-          <rect x="10" y="12" width="44" height="40" rx="4" ry="4" stroke="#fff" fill="none" />
-          <line x1="22" y1="24" x2="42" y2="24" stroke="#fff" />
-          <line x1="22" y1="32" x2="42" y2="32" stroke="#fff" />
-          <line x1="22" y1="40" x2="42" y2="40" stroke="#fff" />
-          <circle cx="32" cy="52" r="4" stroke="#fff" />
-        </svg>
-        DJ The PC Dude
-      </h1>
-
+      <h1>DJ The PC Dude</h1>
       <nav>
         <ul>
           <li><a href="#services">Services</a></li>
@@ -174,7 +163,7 @@
   </header>
 
   <section id="hero">
-    <div class="hero-text">
+    <div class="container">
       <h2>Seattle's Trusted Tech Fixer</h2>
       <p>Custom PC builds, expert repairs, and honest service. Serving Yesler & Chinatown since day one.</p>
       <a href="#contact" class="cta-button">Book a Consultation</a>
@@ -228,9 +217,10 @@
   <section id="about">
     <div class="container">
       <h2>About Me</h2>
-      <p>
-        I'm DJ — a freelance tech raised by hustlers, against all odds still I rise and came out learning to build rigs with more focus than most. Tech gave me a purpose, a hustle, and a way to give back. I run my biz outta
-        Yesler and Chinatown, fixing tech for folks who know the struggle. This is more than repair — it's redemption through resistors.
+      <p style="text-align:center;">
+        I'm DJ — a freelance tech raised by hustlers. Against all odds, I learned to build rigs with more focus than most.
+        Tech gave me purpose, a hustle, and a way to give back. I run my biz outta Yesler and Chinatown,
+        fixing tech for folks who know the struggle. This is more than repair — it's redemption through resistors.
       </p>
     </div>
   </section>
@@ -244,7 +234,9 @@
         <textarea name="message" placeholder="Tell me what you need" required></textarea>
         <button type="submit">Send Message</button>
       </form>
-      <p>Email me directly at <a href="mailto:contact@djthepcdude.com">contact@djthepcdude.com</a></p>
+      <p style="text-align:center; margin-top:1rem;">
+        Or email me directly: <a href="mailto:contact@djthepcdude.com">contact@djthepcdude.com</a>
+      </p>
     </div>
   </section>
 
@@ -253,5 +245,6 @@
       <p>&copy; 2025 DJ The PC Dude. All rights reserved.</p>
     </div>
   </footer>
+
 </body>
 </html>
