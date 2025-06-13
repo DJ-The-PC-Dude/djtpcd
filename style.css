@@ -172,7 +172,157 @@
         font-size: 2rem;
       }
     }
- 
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1>
+        <svg class="logo-svg" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-label="DJ The PC Dude Logo" role="img">
+          <rect x="10" y="12" width="44" height="40" rx="4" ry="4" stroke="#fff" fill="none" />
+          <line x1="22" y1="24" x2="42" y2="24" stroke="#fff" />
+          <line x1="22" y1="32" x2="42" y2="32" stroke="#fff" />
+          <line x1="22" y1="40" x2="42" y2="40" stroke="#fff" />
+          <circle cx="32" cy="52" r="4" stroke="#fff" />
+        </svg>
+        DJ The PC Dude
+      </h1>
+      <nav>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="hero">
+    <h2>Seattle's Trusted Tech Fixer</h2>
+    <p>Custom PC builds, expert repairs, and honest service. Serving Yesler & Chinatown since day one.</p>
+    <a href="#contact" class="cta-button">Book a Consultation</a>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <h2>My Services</h2>
+      <div class="service-grid">
+        <div class="service">
+          <h3>PC Diagnostics & Repair</h3>
+          <p>From boot issues to system crashes — if it's broke, I’ll fix it.</p>
+        </div>
+        <div class="service">
+          <h3>Performance Optimization</h3>
+          <p>Speed up your system, fix throttling, and get back to gaming or grinding.</p>
+        </div>
+        <div class="service">
+          <h3>Custom Builds</h3>
+          <p>Gaming rigs, studio stations, and mini beasts — made to match your budget and your grind.</p>
+        </div>
+        <div class="service">
+          <h3>Remote Support</h3>
+          <p>Need help fast? I offer remote diagnostics and software solutions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <div class="container">
+      <h2>Builds</h2>
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <img src="https://xoticpc.com/cdn/shop/files/Y40EURTSMAIN.png?v=1738700769&width=1220" alt="Gaming PC Build" />
+          <p>Ultimate Gaming Rig</p>
+        </div>
+        <div class="portfolio-item">
+          <img src="https://www.techpowerup.com/review/chieftec-apex-q/images/instmb.jpg" alt="Workstation" />
+          <p>Professional Workstation</p>
+        </div>
+        <div class="portfolio-item">
+          <img src="https://m.media-amazon.com/images/I/61NnONonHiL._AC_SX569_.jpg" alt="Repaired PC" />
+          <p>Compact Powerhouse</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        I'm DJ — a freelance tech raised by hustlers, against all odds still I rise and came out learning to build rigs with more focus than most. Tech gave me a purpose, a hustle, and a way to give back. I run my biz outta Yesler and Chinatown, fixing tech for folks who know the struggle. This is more than repair — it's redemption through resistors.
+      </p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Get In Touch</h2>
+      <form action="https://formspree.io/f/yourFormID" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Tell me what you need" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <p style="margin-top: 1rem;">Email me directly at <a href="mailto:contact@djthepcdude.com">contact@djthepcdude.com</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 DJ The PC Dude. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+🔧 Tips for Hosting on GitHub Pages:
+Make sure this file is named index.html.
+
+It should be placed at the root of the main or gh-pages branch.
+
+Use the GitHub Pages setting under repository > Settings > Pages > Source > main (or gh-pages), root.
+
+If you'd like animations, dark/light toggle, or service worker integration next — let me know.
+
+
+
+
+
+
+
+You said:
+yes and also dont want svg for images 
+
+
+ChatGPT said:
+Here's a fully optimized and centered version of your GitHub static site HTML. Changes include:
+
+✅ Key Fixes + Optimizations
+Centered layout: Ensured all .container elements and key content areas are centered using Flexbox or auto margins.
+
+Removed SVG: Replaced your inline <svg> logo with a simple text fallback (you can swap it for a PNG or JPG logo easily).
+
+Cleaned + Optimized CSS:
+
+Unified layout rules
+
+Reduced redundancy
+
+Added media-query support for responsiveness
+
+✅ Final HTML (Copy & Paste Ready)
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DJ The PC Dude | Custom Builds & Tech Repair</title>
+  <meta name="description" content="Seattle-based freelance PC repair, custom builds, and tech solutions by DJ The PC Dude. Honest, fast, and affordable service in Yesler and Chinatown areas." />
+  <style>
     * {
       box-sizing: border-box;
       margin: 0;
@@ -192,23 +342,6 @@
       padding: 1rem 0;
       text-align: center;
     }
-
-    .toggle-btn {
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background: none;
-  border: 2px solid var(--accent);
-  color: var(--accent);
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background var(--transition), color var(--transition);
-}
-
-.toggle-btn:hover {
-  background: var(--accent);
-  color: var(--bg);
-}
-
 
     .container {
       max-width: 960px;
