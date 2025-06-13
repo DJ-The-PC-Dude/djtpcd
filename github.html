@@ -26,10 +26,31 @@
     }
   </style>
 </head>
+  <header>
+    <div class="container">
+     <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+  <h1 style="margin: 0;">DJ The PC Dude</h1>
+      <button id="toggleTheme" class="toggle-btn">Toggle Dark Mode</button>
+  </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="github.html">Github Repo</a></li>  
+          <li><a href="recycle.html">Recycle | Donate</a></li>
+          <li><a href="#contact">Contact</a></li>  
+          
+        
+        </ul>
+      </nav>
+    </div>
+  </header>
 <body class="bg-gradient-to-tr from-gray-900 to-black text-white min-h-screen p-6 font-mono">
   <h1 class="text-3xl font-bold mb-6 underline underline-offset-4 decoration-cyan-500">🔥 DJ’s GitHub Projects</h1>
-  
-  <div id="repo-list" class="grid gap-6 md:grid-cols-2 lg:grid-cols-3"></div>
+  cols-2 lg:grid-cols-3"></div>
 
   <script>
     fetch('https://api.github.com/users/Hxmmxr/repos?sort=updated')
@@ -38,7 +59,8 @@
         const container = document.getElementById('repo-list');
         repos.forEach((repo, i) => {
           const card = document.createElement('div');
-          card.className = `bg-gray-800 p-5 rounded-2xl shadow-lg neon-glow transform hover:scale-105 transition duration-300 ease-in-out fade-in-up`;
+          card.className = `bg-gray-800 p
+  <div id="repo-list" class="grid gap-6 md:grid--5 rounded-2xl shadow-lg neon-glow transform hover:scale-105 transition duration-300 ease-in-out fade-in-up`;
           card.style.animationDelay = `${i * 0.1}s`; // Stagger animations
           card.innerHTML = `
             <h2 class="text-xl font-semibold mb-2 text-cyan-400">${repo.name}</h2>
