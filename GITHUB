@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DJ The PC Dude | GitHub Sync</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes fadeSlideUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in-up {
+      animation: fadeSlideUp 0.6s ease forwards;
+    }
+
+    .neon-glow:hover {
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.3), 0 0 20px rgba(0, 255, 255, 0.2);
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-tr from-gray-900 to-black text-white min-h-screen p-6 font-mono">
+  <h1 class="text-3xl font-bold mb-6 underline underline-offset-4 decoration-cyan-500">🔥 DJ’s GitHub Projects</h1>
+  
+  <div id="repo-list" class="grid gap-6 md:grid-cols-2 lg:grid-cols-3"></div>
+
+  <script>
+    fetch('https://api.github.com/users/Hxmmxr/repos?sort=updated')
+      .then(response => response.json())
+      .then(repos => {
+        const container = document.getElementById('repo-list');
+        repos.forEach((repo, i) => {
+          const card = document.createElement('div');
+          card.className = `bg-gray-800 p-5 rounded-2xl shadow-lg neon-glow transform hover:scale-105 transition duration-300 ease-in-out fade-in-up`;
+          card.style.animationDelay = `${i * 0.1}s`; // Stagger animations
+          card.innerHTML = `
+            <h2 class="text-xl font-semibold mb-2 text-cyan-400">${repo.name}</h2>
+            <p class="text-gray-300 mb-2 text-sm">${repo.description || 'No description yet...'}</p>
+            <div class="text-xs text-gray-400 flex justify-between items-center">
+              <span>💻 ${repo.language || 'N/A'}</span>
+              <span>⭐ ${repo.stargazers_count}</span>
+            </div>
+            <a href="${repo.html_url}" target="_blank" class="block mt-3 text-cyan-300 hover:text-white text-sm underline">View on GitHub</a>
+          `;
+          container.appendChild(card);
+        });
+      });
+  </script>
+</body>
+</html>
+
+
