@@ -5,115 +5,114 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>DJ The PC Dude | Custom Builds & Tech Repair</title>
   <meta name="description" content="Seattle-based freelance PC repair, custom builds, and tech solutions by DJ The PC Dude. Honest, fast, and affordable service in Yesler and Chinatown areas." />
-  
-  <!-- Tailwind CSS via CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- External Custom CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
+<body>
 
-<body class="bg-gradient-to-tr from-gray-900 to-black text-white font-mono min-h-screen">
+  <header>
+    <div class="container">
+     <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+  <h1 style="margin: 0;">DJ The PC Dude</h1>
+  </div>
 
-  <!-- Header -->
-  <header class="p-6">
-    <div class="flex justify-between items-center mb-4">
-      <h1 class="text-2xl font-bold text-cyan-400">DJ The PC Dude</h1>
-      <button id="toggleTheme" class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition">Toggle Dark Mode</button>
-    </div>
-
-    <nav>
+      <nav>
       <ul class="flex flex-wrap gap-4 text-sm text-cyan-300">
         <li><a href="index.html" class="hover:underline">Home</a></li>
         <li><a href="pages/services.html" class="hover:underline">Services</a></li>
         <li><a href="#portfolio" class="hover:underline">Portfolio</a></li>
         <li><a href="#about" class="hover:underline">About</a></li>
-        <li><a href="/github.html" class="hover:underline">GitHub Repo</a></li>
+        <li><a href="github.html" class="hover:underline">GitHub Repo</a></li>
         <li><a href="pages/recycle.html" class="hover:underline">Recycle | Donate</a></li>
         <li><a href="#contact" class="hover:underline">Contact</a></li>
-      </ul>
-    </nav>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- Hero -->
-  <section id="hero" class="p-6 text-center fade-in-up">
-    <h2 class="text-3xl font-bold mb-2">Seattle's Trusted Tech Fixer</h2>
-    <p class="mb-4">Custom PC builds, expert repairs, and honest service. Serving Yesler & Chinatown since day one.</p>
-    <a href="#contact" class="inline-block bg-cyan-500 hover:bg-cyan-600 text-black px-6 py-2 rounded transition font-semibold">Book a Consultation</a>
+  <section id="hero">
+    <div class="container">
+      <h2>Seattle's Trusted Tech Fixer</h2>
+      <p>Custom PC builds, expert repairs, and honest service. Serving Yesler & Chinatown since day one.</p>
+      <a href="#contact" class="cta-button">Book a Consultation</a>
+    </div>
   </section>
 
-  <!-- Services -->
-  <section id="services" class="p-6 fade-in-up">
-    <h2 class="text-2xl font-bold mb-4">My Services</h2>
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div class="bg-gray-800 p-4 rounded-xl shadow neon-glow">
-        <h3 class="text-cyan-400 font-semibold mb-2">PC Diagnostics & Repair</h3>
-        <p>From boot issues to system crashes — if it's broke, I’ll fix it.</p>
-      </div>
-      <div class="bg-gray-800 p-4 rounded-xl shadow neon-glow">
-        <h3 class="text-cyan-400 font-semibold mb-2">Performance Optimization</h3>
-        <p>Speed up your system, fix throttling, and get back to gaming or grinding.</p>
-      </div>
-      <div class="bg-gray-800 p-4 rounded-xl shadow neon-glow">
-        <h3 class="text-cyan-400 font-semibold mb-2">Custom Builds</h3>
-        <p>Gaming rigs, studio stations, and mini beasts — built for your hustle.</p>
-      </div>
-      <div class="bg-gray-800 p-4 rounded-xl shadow neon-glow">
-        <h3 class="text-cyan-400 font-semibold mb-2">Remote Support</h3>
-        <p>Need help fast? I offer remote diagnostics and software solutions.</p>
+  <section id="services">
+    <div class="container">
+      <h2>My Services</h2>
+      <div class="service-grid">
+        <div class="service">
+          <h3>PC Diagnostics & Repair</h3>
+          <p>From boot issues to system crashes — if it's broke, I’ll fix it.</p>
+        </div>
+        <div class="service">
+          <h3>Performance Optimization</h3>
+          <p>Speed up your system, fix throttling, and get back to gaming or grinding.</p>
+        </div>
+        <div class="service">
+          <h3>Custom Builds</h3>
+          <p>Gaming rigs, studio stations, and mini beasts — made to match your budget and your grind.</p>
+        </div>
+        <div class="service">
+          <h3>Remote Support</h3>
+          <p>Need help fast? I offer remote diagnostics and software solutions.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Portfolio -->
-  <section id="portfolio" class="p-6 fade-in-up">
-    <h2 class="text-2xl font-bold mb-4">Builds</h2>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="portfolio-item text-center">
-        <img class="rounded-lg" src="https://xoticpc.com/cdn/shop/files/Y40EURTSMAIN.png?v=1738700769&width=1220" alt="Gaming PC Build" />
-        <p class="mt-2">Ultimate Gaming Rig</p>
-      </div>
-      <div class="portfolio-item text-center">
-        <img class="rounded-lg" src="https://www.techpowerup.com/review/chieftec-apex-q/images/instmb.jpg" alt="Workstation" />
-        <p class="mt-2">Professional Workstation</p>
-      </div>
-      <div class="portfolio-item text-center">
-        <img class="rounded-lg" src="https://m.media-amazon.com/images/I/61NnONonHiL._AC_SX569_.jpg" alt="Repaired PC" />
-        <p class="mt-2">Compact Powerhouse</p>
+  <section id="portfolio">
+    <div class="container">
+      <h2>Builds</h2>
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <img src="https://xoticpc.com/cdn/shop/files/Y40EURTSMAIN.png?v=1738700769&width=1220" alt="Gaming PC Build" />
+          <p>Ultimate Gaming Rig</p>
+        </div>
+        <div class="portfolio-item">
+          <img src="https://www.techpowerup.com/review/chieftec-apex-q/images/instmb.jpg" alt="Workstation" />
+          <p>Professional Workstation</p>
+        </div>
+        <div class="portfolio-item">
+          <img src="https://m.media-amazon.com/images/I/61NnONonHiL._AC_SX569_.jpg" alt="Repaired PC" />
+          <p>Compact Powerhouse</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- About -->
-  <section id="about" class="p-6 text-center fade-in-up">
-    <h2 class="text-2xl font-bold mb-4">About Me</h2>
-    <p>
-      I'm DJ — a freelance tech raised by hustlers. Against all odds, I learned to build rigs with more focus than most.
-      Tech gave me purpose, a hustle, and a way to give back. I run my biz outta Yesler and Chinatown,
-      fixing tech for folks who know the struggle. This is more than repair — it's redemption through resistors.
-    </p>
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p style="text-align:center;">
+        I'm DJ — a freelance tech raised by hustlers. Against all odds, I learned to build rigs with more focus than most.
+        Tech gave me purpose, a hustle, and a way to give back. I run my biz outta Yesler and Chinatown,
+        fixing tech for folks who know the struggle. This is more than repair — it's redemption through resistors.
+      </p>
+    </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="p-6 fade-in-up">
-    <h2 class="text-2xl font-bold mb-4">Get In Touch</h2>
-    <form action="https://formspree.io/f/yourFormID" method="POST" class="max-w-xl mx-auto space-y-4">
-      <input type="text" name="name" placeholder="Your Name" required class="w-full p-2 rounded bg-gray-800 text-white" />
-      <input type="email" name="email" placeholder="Your Email" required class="w-full p-2 rounded bg-gray-800 text-white" />
-      <textarea name="message" placeholder="Tell me what you need" required class="w-full p-2 rounded bg-gray-800 text-white"></textarea>
-      <button type="submit" class="bg-cyan-500 hover:bg-cyan-600 text-black px-4 py-2 rounded font-semibold">Send Message</button>
-    </form>
-    <p class="text-center mt-4">
-      Or email me directly: <a href="mailto:contact@djthepcdude.com" class="text-cyan-400 hover:underline">contact@djthepcdude.com</a>
-    </p>
+  <section id="contact">
+    <div class="container">
+      <h2>Get In Touch</h2>
+      <form action="https://formspree.io/f/yourFormID" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Tell me what you need" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <p style="text-align:center; margin-top:1rem;">
+        Or email me directly: <a href="mailto:contact@djthepcdude.com">contact@djthepcdude.com</a>
+      </p>
+    </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="p-6 text-center text-sm text-gray-500">
-    <p>&copy; 2025 DJ The PC Dude. All rights reserved.</p>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 DJ The PC Dude. All rights reserved.</p>
+    </div>
   </footer>
 
-  <!-- External JS (must be at the end) -->
   <script src="script.js" defer></script>
 </body>
 </html>
