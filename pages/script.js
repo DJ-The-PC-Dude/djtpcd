@@ -1,17 +1,16 @@
-// Dark mode logic
+// Theme toggle logic
 const toggleBtn = document.getElementById('toggleTheme');
-const userPref = localStorage.getItem('theme');
+if (toggleBtn) {
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+  });
 
-if (userPref === 'dark') {
-  document.body.classList.add('dark');
+  const saved = localStorage.getItem('theme');
+  if (saved === 'dark') document.body.classList.add('dark');
 }
 
-toggleBtn.addEventListener('click', () => {
-  document.body.classList.toggle('dark');
-  localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
-});
-
-// Fade-in transitions
+// Reveal animations
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -20,4 +19,4 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('section, header, footer').forEach(el => observer.observe(el));
+document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
