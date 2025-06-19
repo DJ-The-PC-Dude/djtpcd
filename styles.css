@@ -1,5 +1,19 @@
 /* styles.css */
 
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* styles.css */
+
 /* Custom Animations */
 @keyframes fadeSlideUp {
   0% {
