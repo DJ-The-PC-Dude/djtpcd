@@ -35,3 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(el);
   });
 });
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
