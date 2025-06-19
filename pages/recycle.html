@@ -2,38 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Donate or Recycle Tech | DJ The PC Dude</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <div class="container">
-     <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-  <h1 style="margin: 0;">DJ The PC Dude</h1>
-      <button id="toggleTheme" class="toggle-btn">Toggle Dark Mode</button>
-  </div>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DJ The PC Dude | Page Title</title>
+  <meta name="description" content="Page-specific meta description here." />
 
-      <nav>
-        <ul>
-         <li><a href="../index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="#lio">Portfolio</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="github.html">Github Repo</a></li>  
-          <li><a href="precycle.html">Recycle | Donate</a></li>
-          <li><a href="#contact">Contact</a></li>  
-          
-        
-        </ul>
-      </nav>
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body class="bg-gradient-to-tr from-gray-900 to-black text-white font-mono min-h-screen">
+
+  <!-- Header -->
+  <header class="p-6">
+    <div class="flex justify-between items-center mb-4">
+      <h1 class="text-2xl font-bold text-cyan-400">DJ The PC Dude</h1>
+      <button id="toggleTheme" class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition">Toggle Dark Mode</button>
     </div>
- 
-    <h1>Donate or Recycle Computer Parts</h1>
-    <p>Support your Seattle tech community. We accept only high-quality parts for reuse or responsible recycling.</p>
+
+    <nav>
+      <ul class="flex flex-wrap gap-4 text-sm text-cyan-300">
+        <li><a href="/index.html" class="hover:underline">Home</a></li>
+        <li><a href="/pages/services.html" class="hover:underline">Services</a></li>
+        <li><a href="/#portfolio" class="hover:underline">Portfolio</a></li>
+        <li><a href="/#about" class="hover:underline">About</a></li>
+        <li><a href="/github.html" class="hover:underline">GitHub Repo</a></li>
+        <li><a href="/pages/recycle.html" class="hover:underline">Recycle | Donate</a></li>
+        <li><a href="/#contact" class="hover:underline">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main>
+  <!-- Main Content Area -->
+  <main class="p-6 fade-in-up">
+    <section class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">Donate or Recycle Computer Parts</h2>
+      <p class="text-gray-300 mb-6">This is a reusable page layout template. Replace this section with your page content.</p>
+
+
+       <main>
     <section>
       <h2>✅ Accepted Parts</h2>
       <ul>
@@ -60,7 +69,7 @@
 
     <section>
       <h3>📋 Condition Guidelines</h3>
-      <p>Items must be functional and clean. No rust, corrosion, or major physical damage. When in doubt, send photos.</p>
+      <p>Support your Seattle tech community. We accept only high-quality parts for reuse or responsible recycling.</p>
     </section>
 
     <section>
@@ -87,9 +96,33 @@
       <p>All verified donors receive 10% off their next service or upgrade.</p>
     </section>
   </main>
+      <!-- Example content block -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow neon-glow text-left">
+        <h3 class="text-xl text-cyan-400 font-semibold mb-2">Feature or Section Title</h3>
+        <p>Insert detailed content, lists, forms, or custom HTML blocks here as needed.</p>
+      </div>
+    </section>
+  </main>
 
-  <footer>
-    <p>&copy; 2025 DJ The PC Dude | Serving Seattle's Chinatown & Yesler communities</p>
+  <!-- Optional Contact Section -->
+  <section id="contact" class="p-6 fade-in-up">
+    <div class="max-w-xl mx-auto">
+      <h2 class="text-2xl font-bold mb-4 text-center">Get In Touch</h2>
+      <form action="https://formspree.io/f/yourFormID" method="POST" class="space-y-4">
+        <input type="text" name="name" placeholder="Your Name" required class="w-full p-2 rounded bg-gray-800 text-white" />
+        <input type="email" name="email" placeholder="Your Email" required class="w-full p-2 rounded bg-gray-800 text-white" />
+        <textarea name="message" placeholder="Tell me what you need" required class="w-full p-2 rounded bg-gray-800 text-white"></textarea>
+        <button type="submit" class="bg-cyan-500 hover:bg-cyan-600 text-black px-4 py-2 rounded font-semibold">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="p-6 text-center text-sm text-gray-500">
+    <p>&copy; 2025 DJ The PC Dude. All rights reserved.</p>
   </footer>
+
+  <!-- Scripts -->
+  <script src="/script.js" defer></script>
 </body>
 </html>
