@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Hash Generator</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+<style>
+  body {
+    background-color: #000;
+    color: #3399ff;
+    font-family: 'Courier New', monospace;
+    padding: 2rem;
+    user-select: none;
+  }
+  h1 {
+    text-align: center;
+    color: #3399ff;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px #3399ff, 0 0 25px #3399ff;
+  }
+  nav {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  nav a {
+    color: #3399ff;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 0 0 5px #3399ff;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+  label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+  textarea, select {
+    width: 100%;
+    max-width: 700px;
+    background: #000;
+    color: #3399ff;
+    border: 1.5px solid #3399ff;
+    padding: 0.75rem;
+    font-family: monospace;
+    font-size: 1rem;
+    border-radius: 6px;
+    box-shadow:
+      0 0 8px #3399ff,
+      inset 0 0 5px #3399ff;
+    resize: vertical;
+    margin-top: 0.5rem;
+  }
+  textarea {
+    min-height: 140px;
+  }
+  textarea:focus, select:focus {
+    outline: none;
+    border-color: #aaddff;
+    box-shadow:
+      0 0 14px #aaddff,
+      inset 0 0 10px #aaddff;
+  }
+  button {
+    background: transparent;
+    color: #3399ff;
+    border: 1.5px solid #3399ff;
+    padding: 0.7rem 1.5rem;
+    font-family: monospace;
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 12px #3399ff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  button:hover {
+    background-color: #3399ff;
+    color: #000;
+    font-weight: bold;
+    box-shadow: 0 0 30px #3399ff;
+  }
+  #output {
+    margin-top: 1.5rem;
+    background: #000;
+    border: 1.5px solid #3399ff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: inset 0 0 15px #3399ff;
+    min-height: 100px;
+    white-space: pre-wrap;
+    color: #3399ff;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">🏠 Home</a>
+  <a href="encrypt.html">Encrypt / Decrypt</a>
+  <a href="password.html">Password Generator</a>
+  <a href="base64.html">Base64 Encoder/Decoder</a>
+  <a href="filecrypt.html">File Encryptor</a>
+</nav>
+
+<h1>🔐 Hash Generator</h1>
+
+<label for="hash-text">> Enter text:</label>
+<textarea id="hash-text" placeholder="Type text to hash..."></textarea>
+
+<label for="hash-algo">> Select algorithm:</label>
+<select id="hash-algo" aria-label="Select hash algorithm">
+  <option value="MD5">MD5</option>
+  <option value="SHA1">SHA-1</option>
+  <option value="SHA256" selected>SHA-256</option>
+  <option value="SHA512">SHA-512</option>
+</select>
+
+<button id="hash-btn">> Generate Hash</button>
+
+<div id="output">_</div>
+
+<script>
+  const hashBtn = document.getElementById('hash-btn');
+  const outputDiv = document.getElementById('output');
+
+  hashBtn.addEventListener('click', () => {
+    const text = document.getElementById('hash-text').value.trim();
+    const algo = document.getElementById('hash-algo').value;
+
+    if (!text) return alert('Text is required.');
+
+    let hash;
+    switch(algo) {
+      case 'MD5': hash = CryptoJS.MD5(text); break;
+      case 'SHA1': hash = CryptoJS.SHA1(text); break;
+      case 'SHA256': hash = CryptoJS.SHA256(text); break;
+      case 'SHA512': hash = CryptoJS.SHA512(text); break;
+      default: return alert('Invalid algorithm');
+    }
+
+    outputDiv.textContent = hash.toString(CryptoJS.enc.Hex);
+  });
+</script>
+
+</body>
+</html>

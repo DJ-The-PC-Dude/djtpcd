@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Base64 Encoder / Decoder</title>
+<style>
+  body {
+    background-color: #000;
+    color: #00ffff;
+    font-family: 'Courier New', monospace;
+    padding: 2rem;
+    user-select: none;
+  }
+  h1 {
+    text-align: center;
+    color: #00ffff;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px #00ffff, 0 0 25px #00ffff;
+  }
+  nav {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  nav a {
+    color: #00ffff;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 0 0 5px #00ffff;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+  label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+  textarea {
+    width: 100%;
+    max-width: 700px;
+    background: #000;
+    color: #00ffff;
+    border: 1.5px solid #00ffff;
+    padding: 0.75rem;
+    font-family: monospace;
+    font-size: 1rem;
+    border-radius: 6px;
+    box-shadow:
+      0 0 8px #00ffff,
+      inset 0 0 5px #00ffff;
+    resize: vertical;
+    margin-top: 0.5rem;
+    min-height: 140px;
+  }
+  textarea:focus {
+    outline: none;
+    border-color: #aaffff;
+    box-shadow:
+      0 0 14px #aaffff,
+      inset 0 0 10px #aaffff;
+  }
+  button {
+    background: transparent;
+    color: #00ffff;
+    border: 1.5px solid #00ffff;
+    padding: 0.7rem 1.5rem;
+    font-family: monospace;
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 12px #00ffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  button:hover {
+    background-color: #00ffff;
+    color: #000;
+    font-weight: bold;
+    box-shadow: 0 0 30px #00ffff;
+  }
+  #output {
+    margin-top: 1.5rem;
+    background: #000;
+    border: 1.5px solid #00ffff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: inset 0 0 15px #00ffff;
+    min-height: 100px;
+    white-space: pre-wrap;
+    color: #00ffff;
+    user-select: text;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">🏠 Home</a>
+  <a href="encrypt.html">Encrypt / Decrypt</a>
+  <a href="hash.html">Hash Generator</a>
+  <a href="password.html">Password Generator</a>
+  <a href="filecrypt.html">File Encryptor</a>
+</nav>
+
+<h1>🔄 Base64 Encoder / Decoder</h1>
+
+<label for="base64-input">> Enter text:</label>
+<textarea id="base64-input" placeholder="Type or paste text here..."></textarea>
+
+<button id="encode-btn">> Encode to Base64</button>
+<button id="decode-btn">> Decode from Base64</button>
+<button id="copy-btn">> Copy Output</button>
+
+<div id="output">_</div>
+
+<script>
+  const inputArea = document.getElementById('base64-input');
+  const outputDiv = document.getElementById('output');
+  const encodeBtn = document.getElementById('encode-btn');
+  const decodeBtn = document.getElementById('decode-btn');
+  const copyBtn = document.getElementById('copy-btn');
+
+  encodeBtn.addEventListener('click', () => {
+    const text = inputArea.value;
+    if (!text) return alert('Input text is required.');
+
+    try {
+      // Encode Unicode-safe base64
+      const encoded = btoa(unescape(encodeURIComponent(text)));
+      outputDiv.textContent = encoded;
+    } catch (e) {
+      alert('Failed to encode text.');
+    }
+  });
+
+  decodeBtn.addEventListener('click', () => {
+    const text = inputArea.value;
+    if (!text) return alert('Input text is required.');
+
+    try {
+      // Decode Unicode-safe base64
+      const decoded = decodeURIComponent(escape(atob(text)));
+      outputDiv.textContent = decoded;
+    } catch (e) {
+      alert('Failed to decode. Ensure the input is valid Base64.');
+    }
+  });
+
+  copyBtn.addEventListener('click', () => {
+    if (!outputDiv.textContent.trim()) return alert('Nothing to copy!');
+    navigator.clipboard.writeText(outputDiv.textContent).then(() => {
+      alert('Output copied to clipboard.');
+    });
+  });
+</script>
+
+</body>
+</html>
