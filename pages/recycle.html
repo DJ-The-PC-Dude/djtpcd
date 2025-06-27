@@ -83,13 +83,21 @@
 
       <section>
         <h2>📝 Donation Request Form</h2>
-        <form action="/submit-donation" method="POST" enctype="multipart/form-data">
-          <label>Name:<br><input type="text" name="name" required></label><br><br>
-          <label>Contact Info:<br><input type="text" name="contact" required></label><br><br>
-          <label>Item List:<br><textarea name="items" rows="4" required></textarea></label><br><br>
-          <label>Upload Photos:<br><input type="file" name="photos" accept="image/*" multiple></label><br><br>
-          <button type="submit">Submit Request</button>
-        </form>
+        form
+  action="https://formspree.io/f/mldnanol"
+  method="POST"
+  enctype="multipart/form-data"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your file:
+    <input type="file" name="upload">
+  </label>
+  <button type="submit">Send</button>
+</form>
       </section>
 
       <section>
@@ -105,19 +113,7 @@
     </section>
   </main>
 
-  <!-- Optional Contact Section (still present for SEO, but not linked from nav) -->
-  <section id="contact" class="p-6 fade-in-up">
-    <div class="max-w-xl mx-auto">
-      <h2 class="text-2xl font-bold mb-4 text-center">Get In Touch</h2>
-      <form action="https://formspree.io/f/yourFormID" method="POST" class="space-y-4">
-        <input type="text" name="name" placeholder="Your Name" required class="w-full p-2 rounded bg-gray-800 text-white" />
-        <input type="email" name="email" placeholder="Your Email" required class="w-full p-2 rounded bg-gray-800 text-white" />
-        <textarea name="message" placeholder="Tell me what you need" required class="w-full p-2 rounded bg-gray-800 text-white"></textarea>
-        <button type="submit" class="bg-cyan-500 hover:bg-cyan-600 text-black px-4 py-2 rounded font-semibold">Send Message</button>
-      </form>
-    </div>
-  </section>
-
+  <!-- Optional Contact Section (still present for SEO, but not linked from nav) --
   <!-- Footer -->
   <footer class="p-6 text-center text-sm text-gray-500">
     <p>&copy; 2025 DJ The PC Dude. All rights reserved.</p>
