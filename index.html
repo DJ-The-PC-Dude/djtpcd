@@ -132,19 +132,32 @@
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="p-6 fade-in-up">
-    <h2 class="text-2xl font-bold mb-4">Get In Touch</h2>
-    <form action="https://formspree.io/f/yourFormID" method="POST" class="max-w-xl mx-auto space-y-4">
-      <input type="text" name="name" placeholder="Your Name" required class="w-full p-2 rounded bg-gray-800 text-white" />
-      <input type="email" name="email" placeholder="Your Email" required class="w-full p-2 rounded bg-gray-800 text-white" />
-      <textarea name="message" placeholder="Tell me what you need" required class="w-full p-2 rounded bg-gray-800 text-white"></textarea>
-      <button type="submit" class="bg-cyan-500 hover:bg-cyan-600 text-black px-4 py-2 rounded font-semibold">Send Message</button>
-    </form>
-    <p class="text-center mt-4">
-      Or email me directly: <a href="mailto:contact@djthepcdude.com" class="text-cyan-400 hover:underline">contact@djthepcdude.com</a>
-    </p>
-  </section>
+<form action="https://formspree.io/f/mldnanol" method="POST" class="space-y-4 max-w-xl mx-auto text-left">
+  <label class="block">
+    <span class="text-gray-300">Your Email:</span>
+    <input type="email" name="email" required
+      class="w-full mt-1 p-3 bg-gray-800 text-white placeholder-gray-400 rounded border border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-500" 
+      placeholder="you@example.com" />
+  </label>
 
+  <label class="block">
+    <span class="text-gray-300">Your Message:</span>
+    <textarea name="message" rows="5" required
+      class="w-full mt-1 p-3 bg-gray-800 text-white placeholder-gray-400 rounded border border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+      placeholder="What would you like to donate or ask?"></textarea>
+  </label>
+
+  <!-- Optional anti-spam honeypot -->
+  <input type="text" name="_gotcha" style="display:none" />
+
+  <!-- Optional redirect after submit -->
+  <input type="hidden" name="_redirect" value="https://djthepcdude.com/thank-you.html" />
+
+  <button type="submit"
+    class="bg-cyan-500 hover:bg-cyan-600 text-black font-semibold px-4 py-2 rounded transition">
+    Send
+  </button>
+</form>
   <!-- Footer -->
   <footer class="p-6 text-center text-sm text-gray-500">
     <p>&copy; 2025 DJ The PC Dude. All rights reserved.</p>
