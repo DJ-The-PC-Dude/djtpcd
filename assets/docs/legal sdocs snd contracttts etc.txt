@@ -1,0 +1,106 @@
+---
+
+title: Hustler Legal Toolkit - Scaffolded Templates
+owner: DJ The PC Dude
+date: 2025-07-28
+license: CC-BY 4.0
+------------------
+
+## 📄 1. Invoice Template (Freelance / Service Work)
+
+**Invoice #:** 0001
+**Date:** {{invoice\_date}}
+**Due Date:** {{due\_date}}
+
+**From:**
+DJ The PC Dude™
+Seattle, WA
+[djthepcdude@gmail.com](mailto:djthepcdude@gmail.com)
+CashApp: \$djthepcdude
+
+**To:**
+{{client\_name}}
+{{client\_email\_or\_phone}}
+
+---
+
+| **Service**              | **Qty** |   **Rate** |   **Total** |
+| :----------------------- | ------: | ---------: | ----------: |
+| {{service\_description}} | {{qty}} | \${{rate}} | \${{total}} |
+
+**Subtotal:** \${{subtotal}}
+**Discounts:** \${{discounts}}
+**Total Due:** **\${{grand\_total}}**
+
+**Notes:** Thank you for supporting local tech.
+
+---
+
+## 🛡️ 2. PC Repair Waiver & Consent Form
+
+**Client Name:** {{client\_name}}
+**Device:** {{device\_type}}, Serial #: {{serial\_number}}
+
+1. I authorize DJ The PC Dude to perform services on my device.
+2. I understand data may be lost during repair.
+3. I confirm that I have backed up any critical files.
+4. I understand hardware issues may cause failure unrelated to service performed.
+5. I release DJ The PC Dude from liability for data or hardware loss.
+
+**Signature:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+**Date:** {{date}}
+
+---
+
+## 🤝 3. Freelance Service Agreement (Client Contract)
+
+**Parties:** DJ The PC Dude ("Contractor") and {{client\_name}} ("Client")
+
+### Scope of Work:
+
+* {{describe\_scope}}
+
+### Payment Terms:
+
+* {{fee\_structure}} (e.g., 50% upfront, 50% on delivery)
+* Payment via: CashApp, PayPal, Zelle
+
+### Deliverables:
+
+* {{list\_deliverables}}
+
+### Ownership:
+
+* Work product is transferred upon full payment
+
+### Cancellation & Refund:
+
+* 50% cancellation fee applies after work has started
+
+**Signatures:**
+Client: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+Contractor: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+Date: {{date}}
+
+---
+
+## 🧠 4. Client Intake Form
+
+**Client Name:** {{client\_name}}
+**Phone / Email:** {{client\_contact}}
+**Device Info:** {{device\_description}}
+**Issue / Request:** {{client\_issue}}
+
+### Access Details (if needed):
+
+* Password: {{device\_password}}
+* Cloud/OS login info (optional): {{login\_info}}
+
+**Consent to Begin Work:** \[ ] Yes  \[ ] No
+**Preferred Contact:** \[ ] Text  \[ ] Email  \[ ] Call
+
+---
+
+## 🧾 5. Payment Receipt
+
+**Receipt #:** {{receipt\_number}}
