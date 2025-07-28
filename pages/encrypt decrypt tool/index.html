@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Terminal Encryption Kit | DJ The PC Dude</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A Terminal-Style Encryption utility toolkit: encrypt, decrypt, hash, encode, and generate." />
+
+  <style>
+    body {
+      background-color: #000;
+      color: #edf1ed;
+      font-family: 'Courier New', monospace;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: #111;
+      padding: 1.5rem;
+      text-align: center;
+      border-bottom: 1px solid #222;
+    }
+
+    header h1 {
+      color: #00ffe0;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 10px #00ffe0;
+    }
+
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav li a {
+      color: #80f7ff;
+      text-decoration: none;
+      font-size: 0.95rem;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 2px;
+    }
+
+    nav li a:hover {
+      border-bottom: 1px solid #00ffe0;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    main h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 8px #00ffe0;
+    }
+
+    .tool-list {
+      display: grid;
+      gap: 2rem;
+      max-width: 700px;
+      width: 100%;
+    }
+
+    .tool {
+      background-color: #111;
+      border: 2px solid #00ffe0;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00ffe0;
+      transition: transform 0.2s ease;
+    }
+
+    .tool:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 20px #00ffe0;
+    }
+
+    .tool a {
+      display: block;
+      color: #00ffe0;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .tool a:hover {
+      color: #fff;
+    }
+
+    .tool p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.8rem;
+      background: #111;
+      color: #666;
+      border-top: 1px solid #222;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+ <section>
+   <h1>DJ The PC Dude</h1>
+    <nav>
+      <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../services.html">Services</a></li>
+        <li><a href="../../#portfolio">Portfolio</a></li>
+        <li><a href="../../#about">About</a></li>
+        <li><a href="../github.html">GitHub Repo</a></li>
+        <li><a href="../recycle.html">Recycle | Donate</a></li>
+        <li><a href="../../#contact">Contact</a></li>
+      </ul>
+    </nav>
+ </section>
+  </header>
+
+  <main>
+    <h2>Terminal Encryption Kit</h2>
+    <p class="mb-4" style="max-width: 600px; margin: 0 auto 2rem; color: #ccc;">
+      🔐 A lightweight, hacker-inspired Encryption utility hub. Encode, hash, scramble, or protect data with style.
+    </p>
+
+    <section class="tool-list">
+      <div class="tool">
+        <a href="encrypt.html">Text Encrypt / Decrypt</a>
+        <p>Encrypt or decrypt basic strings using a passphrase — useful for quick obfuscation or shared secrets.</p>
+      </div>
+
+      <div class="tool">
+        <a href="hash.html">Hash Generator</a>
+        <p>Generate MD5, SHA1, SHA256, or SHA512 hashes from any text — ideal for password checks or file validation.</p>
+      </div>
+
+      <div class="tool">
+        <a href="password.html">Password Generator</a>
+        <p>Create ultra-strong random passwords for apps, accounts, or vaults. Includes entropy for the paranoid.</p>
+      </div>
+
+      <div class="tool">
+        <a href="base64.html">Base64 Encode / Decode</a>
+        <p>Quickly convert data to/from Base64 — great for embedding in HTML, JSON, or images.</p>
+      </div>
+
+      <div class="tool">
+        <a href="filecrypt.html">File Encrypt / Decrypt</a>
+        <p>Upload and encrypt small files directly in your browser. Great for safe-sharing zipped assets.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 DJ The PC Dude | Built for techs, tinkerers, and terminal warriors.
+  </footer>
+
+</body>
+</html>
